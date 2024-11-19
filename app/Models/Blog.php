@@ -9,6 +9,7 @@ class Blog extends Model
     protected $fillable = [
         'judul',
         'isi',
-        'pembuat'
+        'pembuat',
+        'gambar'
     ];
 }
