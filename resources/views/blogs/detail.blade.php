@@ -12,12 +12,10 @@
     <a href="/blogs" class="text-blue-500 hover:underline mb-6 block">Kembali ke Daftar Blog</a>
 
     <div class="p-6 bg-white rounded shadow">
-        <img src="{{ asset('storage/' . $blog->gambar) }}" alt="Gambar Blog" class="w-full h-48 object-cover mb-4">
-
-
+        <img src="{{ asset('storage/' . $blog->gambar) }}" alt="Gambar Blog" class="w-full h-80 object-cover mb-4">
         <h1 class="text-3xl font-bold">{{ $blog->judul }}</h1>
-        <p class="text-gray-700 mt-4">{{ $blog->isi }}</p>
-        <p class="text-sm text-gray-500 mt-6">Author: {{ $blog->pembuat }}</p>
+        <p class="text-sm text-gray-500 mt-2">Author: {{ $blog->pembuat }}</p>
+        <p class="text-gray-700 mt-6">{{ $blog->isi }}</p>
     </div>
 
     @if (Auth::check() && Auth::user()->name === $blog->pembuat)
